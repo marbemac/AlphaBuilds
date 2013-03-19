@@ -46,6 +46,8 @@ $(document).ready(function() {
                 $self.fadeOut(200, function() {
                     $('#inquiry-success').fadeIn(200)
                 })
+
+                _gaq.push(['_trackPageview', '/inquiry-success']);
             },
             complete: function() {
                 $self.find('.submit').removeClass('disabled').val('Submit Inquiry')
