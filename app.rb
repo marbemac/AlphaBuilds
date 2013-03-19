@@ -15,7 +15,7 @@ configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
 
   Pony.options = {
-      :to => 'team@alphabuilds.com',
+      :to => 'marbemac@gmail.com,matt.c.mccormick@gmail.com,siddiqi28@gmail.com',
       :via => :smtp,
       :via_options => {
           :address => "smtp.sendgrid.net",
