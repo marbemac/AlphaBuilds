@@ -1,0 +1,324 @@
+@import "variables";
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin:0; padding:0; }
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $body-bg-color;
+  height: 100%;
+  color: #222;
+  font-family: helvetica;
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+
+p {
+  color: #222;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+}
+
+input,textarea,select {
+  font-family: helvetica;
+}
+
+.main-section {
+  padding: 50px 0;
+
+  .inner {
+    width: $site-max-width;
+    min-width: 320px;
+    margin: auto;
+    position: relative;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  &.colored {
+    background-color: $primary-color;
+    color: $body-bg-color;
+  }
+  &.patterned {
+    background-image: url('/images/squaresBG.png');
+  }
+  &#title {
+    text-align: center;
+    padding: 125px 0;
+
+    h1 {
+      font-size: 60px;
+      margin: 0 0 10px 0;
+    }
+    h2 {
+
+    }
+  }
+  &#philosophy,
+  &#contact {
+    .content {
+      margin: 30px auto 0 auto;
+      max-width: 540px;
+      text-align: center;
+    }
+    p {
+      &.first {
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+  &#philosophy {
+    border-bottom: 2px dashed #DDD;
+  }
+  &#process,
+  &#who {
+    overflow: hidden;
+
+    .section {
+      width: 33%;
+      float: left;
+      text-align: center;
+      padding: 0 20px;
+      margin: 40px 0 0 0;
+
+      h3 {
+
+      }
+      img {
+        width: 130px;
+      }
+    }
+  }
+  &#process {
+    border-bottom: 2px dashed #DDD;
+  }
+  &#who {
+    h3 {
+      margin: 20px 0;
+    }
+    img {
+      border-radius: 1000px;
+    }
+  }
+  &#contact {
+    padding-bottom: 100px;
+
+    p {
+      color: $body-bg-color;
+    }
+
+    form {
+      margin: 50px 0 0 0;
+      .input {
+        text-align: left;
+        margin: 0 0 25px 0;
+      }
+      label {
+        display: block;
+        font-size: 20px;
+        margin: 0 0 4px 0;
+      }
+      input,
+      textarea,
+      select {
+        font-size: 20px;
+        padding: 8px 10px;
+        border: none;
+        color: #333;
+        width: 100%;
+      }
+      textarea {
+        resize: none;
+        height: 150px;
+      }
+      .submit {
+        cursor: pointer;
+        background: $action-color;
+        color: $body-bg-color;
+        border: 2px solid $body-bg-color;
+        padding: 13px 0 10px 0;
+
+        &:hover {
+          background: darken($action-color, 5%);
+        }
+        &.disabled {
+          background: #999;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-item {
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+
+  a,p {
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+  }
+
+  .photo-grid {
+    float: left;
+    width: 460px;
+    height: 348px;
+  }
+
+  .tech {
+    .head {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .left-side {
+    margin: 0 20px 0 0;
+    text-align: right;
+  }
+
+  .right-side {
+    margin: 0 0 0 20px;
+  }
+
+  .content {
+    float: left;
+    width: 460px;
+    padding: 15px 0 0 0;
+  }
+
+  .summary {
+    margin: 40px 0;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+
+  .row {
+    &.span1 {
+      height: 10%;
+    }
+    &.span2 {
+      height: 20%;
+    }
+    &.span3 {
+      height: 30%;
+    }
+    &.span4 {
+      height: 40%;
+    }
+    &.span5 {
+      height: 50%;
+    }
+    &.span6 {
+      height: 60%;
+    }
+    &.span7 {
+      height: 70%;
+    }
+    &.span8 {
+      height: 80%;
+    }
+    &.span9 {
+      height: 90%;
+    }
+    &.span10 {
+      height: 100%;
+    }
+  }
+
+  .columns {
+    background: $primary-color;
+    transition: all 1s ease-in;
+    height: 100%;
+
+    &.pad-top {
+      padding-top: 5px;
+    }
+    &.pad-right {
+      padding-right: 5px;
+    }
+    &.pad-bottom {
+      padding-bottom: 5px;
+    }
+    &.pad-left {
+      padding-left: 5px;
+    }
+  }
+
+  .photo {
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    background: #CCC;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &.on {
+    background: $primary-color;
+    color: #FFF;
+
+    p {
+      color: #FFF;
+    }
+    a {
+      color: #FFF;
+      text-decoration: underline;
+    }
+  }
+  &.thewhoot {
+    border-bottom: 2px dashed #DDD;
+
+    &.on {
+      border-bottom: none;
+    }
+  }
+}
+
+#inquiry-success {
+  background: $body-bg-color;
+  background: rgba(255,255,255,0.7);
+  color: #333;
+  padding: 25px;
+  margin: 30px 0 0 0;
+  display: none;
+
+  h2 {
+    line-height: 38px;
+  }
+}
+
+
+@import 'media_queries.css.scss';
